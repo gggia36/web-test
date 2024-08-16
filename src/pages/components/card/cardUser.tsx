@@ -52,7 +52,6 @@ export default function CardUser() {
           timer: 1500,
         });
 
-        // อัพเดต state เพื่อไม่ให้แสดงผู้ใช้ที่ถูกลบ
         setUsers(users.filter((user) => user.id !== userId));
       } else {
         Swal.fire({
@@ -80,7 +79,9 @@ export default function CardUser() {
     setCurrentUser(null);
   };
   const handleUpdateUser = (updatedUser: UserType) => {
-    setUsers(users.map((u) => (u.id === updatedUser.id ? updatedUser : u)));
+    setUsers((prevUsers) =>
+      prevUsers.map((user) => (user.id === updatedUser.id ? updatedUser : user))
+    );
   };
 
   return (

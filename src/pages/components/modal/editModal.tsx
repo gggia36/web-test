@@ -4,24 +4,19 @@ import Typography from "@mui/material/Typography";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 
+interface UserType {
+  id: number;
+  email: string;
+  first_name: string;
+  last_name: string;
+  avatar: string;
+}
 interface EditUserModalProps {
   open: boolean;
   handleClose: () => void;
   user: UserType | null;
   handleUpdateUser: (updatedUser: UserType) => void;
 }
-
-// const style = {
-//   position: "absolute" as "absolute",
-//   top: "50%",
-//   left: "50%",
-//   transform: "translate(-50%, -50%)",
-//   width: 400,
-//   bgcolor: "background.paper",
-//   border: "2px solid #000",
-//   boxShadow: 24,
-//   p: 4,
-// };
 
 export default function EditUserModal({
   open,
