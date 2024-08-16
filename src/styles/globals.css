@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black: #0f0f10;
+  --dark: #262c62;
+  --secondary: #bfbfcf;
+  --white: #fff;
+  --gray-100: #f2f2f2;
+  --danger: #f9786d;
+  --success: #6eda78;
+  --warning: #ffa200;
+  --border-radius-lg: 20px;
+  --body-color: #85879d;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  font-family: "Kanit", sans-serif !important;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0px !important;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Kanit", sans-serif !important;
+  font-weight: 500;
+}
+/* 
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} */
+.background-box {
+  height: 100vh;
+  /* background-image: url("/assets/bg.jpg"); */
+  background-image: linear-gradient(
+    to right bottom,
+    #ffffff,
+    #ffffff,
+    #f1e0ff,
+    #efcfff,
+    #f1bcff,
+    #e1beff,
+    #d1bfff,
+    #c2c0ff,
+    #abd0ff,
+    #9adfff,
+    #94ebff,
+    #9cf6ff
+  );
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.box-register {
+  backdrop-filter: blur(15px);
+}
+.bg-transparent {
+  background-color: #ffffff3b !important;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+div:where(.swal2-icon).swal2-success .swal2-success-ring {
+  background-image: url("/assets/Popup.svg") !important;
+  background-size: 100% 100% !important;
+  border: none !important;
+}
+div:where(.swal2-icon).swal2-question {
+  background-image: url("/assets/Popup1.svg") !important;
+  background-size: 100% 100% !important;
+  border: none !important;
+}
+div:where(.swal2-icon).swal2-error {
+  background-image: url("/assets/Popup2.svg") !important;
+  background-size: 100% 100% !important;
+  border: none !important;
+}
+div:where(.swal2-icon).swal2-warning {
+  background-image: url("/assets/Popup1.svg") !important;
+  background-size: 100% 100% !important;
+  border: none !important;
+}
+div:where(.swal2-container) h2:where(.swal2-title) {
+  padding: 0px !important;
+}
+div:where(.swal2-container) div:where(.swal2-popup) {
+  padding: 0 0 2.25em !important;
+  width: 23em !important;
+}
+div:where(.swal2-icon).swal2-error [class^="swal2-x-mark-line"] {
+  display: none !important;
+}
+.btn-swal2-error {
+  font-family: "Kanit", sans-serif !important;
+  border-radius: 8px !important;
+  background-color: var(--danger) !important;
+  color: var(--white) !important;
+  font-size: 14px !important;
+  padding: 10px 20px;
+}
+.w-40 {
+  width: 10rem !important;
+}
+.box-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: #fff;
+  border: 1px solid #858585;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 20px;
+  border-radius: 8px;
+}
