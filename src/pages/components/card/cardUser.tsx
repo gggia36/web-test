@@ -123,7 +123,7 @@ export default function CardUser() {
             <div className="absolute top-0 right-0">
               <div className="flex">
                 <IconButton
-                  className="absolute top-2 right-2 group-hover:text-white"
+                  className="absolute top-2 right-8 group-hover:text-white"
                   onClick={() => handleOpen(user)}
                   color="primary"
                 >
@@ -131,7 +131,7 @@ export default function CardUser() {
                 </IconButton>
                 <IconButton
                   onClick={() => handleDelete(user.id)}
-                  className="absolute top-2 right-2 group-hover:text-white"
+                  className="absolute top-2 right-0 group-hover:text-white"
                   color="error"
                 >
                   <DeleteIcon fontSize="small" />

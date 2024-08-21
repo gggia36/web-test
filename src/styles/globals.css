@@ -50,6 +50,8 @@ h6 {
 .background-box {
   height: 100vh;
   /* background-image: url("/assets/bg.jpg"); */
+  /* filter: blur(8px);
+  -webkit-filter: blur(8px); */
   background-image: linear-gradient(
     to right bottom,
     #ffffff,
@@ -130,4 +132,7 @@ div:where(.swal2-icon).swal2-error [class^="swal2-x-mark-line"] {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 20px;
   border-radius: 8px;
+}
+.border-right {
+  border-right: 1px solid;
 }

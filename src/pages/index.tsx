@@ -1,4 +1,4 @@
-import { Visibility, VisibilityOff } from "@mui/icons-material";
+import { DoneAllSharp, Visibility, VisibilityOff } from "@mui/icons-material";
 import FormControl from "@mui/material/FormControl";
 import IconButton from "@mui/material/IconButton";
 import InputAdornment from "@mui/material/InputAdornment";
@@ -8,7 +8,7 @@ import TextField from "@mui/material/TextField";
 import { useState } from "react";
 import Swal from "sweetalert2";
 
-export default function Index() {
+const LoginPage = () => {
   const [registerStep, setRegisterStep] = useState("stepLoginType");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -106,15 +106,119 @@ export default function Index() {
       });
     }
   };
-
   return (
-    <>
-      <div className="background-box flex justify-center items-center opacity-75">
-        <div className="box-register relative w-4/5 sm:w-2/5 bg-transparent rounded-lg border border-white h-3/6 drop-shadow-md flex justify-center items-center">
+    <div className="min-h-screen flex items-center justify-center background-box ">
+      <div className="relative bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row w-3/4 max-w-4xl bg-opacity-60">
+        {/* Left Side */}
+        <div className="md:w-1/2 p-10  text-white border-right">
+          <ul className="space-y-4 mt-10">
+            <li>
+              <div className="flex items-center space-x-3">
+                <IconButton color="primary">
+                  <DoneAllSharp fontSize="small" />
+                </IconButton>
+                <div>
+                  <p className="text-sm text-slate-500	">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div className="flex items-center space-x-3">
+                <IconButton color="primary">
+                  <DoneAllSharp fontSize="small" />
+                </IconButton>
+                <div>
+                  <p className="text-sm text-slate-500	">
+                    is simply typesetting industry.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div className="flex items-center space-x-3">
+                <IconButton color="primary">
+                  <DoneAllSharp fontSize="small" />
+                </IconButton>
+                <div>
+                  <p className="text-sm text-slate-500	">Lorem Ipsum</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div className="flex items-center space-x-3">
+                <IconButton color="primary">
+                  <DoneAllSharp fontSize="small" />
+                </IconButton>
+                <div>
+                  <p className="text-sm text-slate-500	">
+                    Lorem Ipsum is simply dummy text of the printing and
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        {/* Right Side */}
+        <div className="md:w-1/2 p-10">
+          {/* <form>
+            <div className="space-y-4">
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  E-mail address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="password"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Password
+                </label>
+                <input
+                  type="password"
+                  id="password"
+                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                />
+              </div>
+            </div>
+            <div className="mt-6">
+              <button
+                type="submit"
+                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+              >
+                Sign Up
+              </button>
+            </div>
+          </form> */}
+
           {registerStep === "stepLoginType" ? (
-            <div className="py-16 w-4/5">
-              <h1 className="text-5xl	text-center mb-3">welcome</h1>
-              <h1 className="text-center text-lg	">login</h1>
+            <>
+              <h2 className="text-2xl text-slate-700		mt-3">Welcome to login.</h2>
               <form className="max-w-sm mx-auto pt-6" onSubmit={handleLogin}>
                 <div className="mb-5">
                   <TextField
@@ -173,10 +277,12 @@ export default function Index() {
                   </p>
                 </div>
               </form>
-            </div>
+            </>
           ) : (
-            <div className="py-16 w-4/5">
-              <h1 className="text-center text-lg	">register</h1>
+            <>
+              <h2 className="text-2xl text-slate-700		mt-3">
+                Create an account.
+              </h2>
               <form className="max-w-sm mx-auto pt-6" onSubmit={handleRegister}>
                 <div className="mb-5">
                   <TextField
@@ -236,10 +342,12 @@ export default function Index() {
                   </p>
                 </div>
               </form>
-            </div>
+            </>
           )}
         </div>
       </div>
-    </>
+    </div>
   );
-}
+};
+
+export default LoginPage;
