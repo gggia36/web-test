@@ -110,7 +110,7 @@ const LoginPage = () => {
     <div className="min-h-screen flex items-center justify-center background-box ">
       <div className="relative bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row w-3/4 max-w-4xl bg-opacity-60">
         {/* Left Side */}
-        <div className="md:w-1/2 p-10  text-white border-right">
+        <div className="md:w-1/2 p-10  text-white border-right md:order-1 order-2  ">
           <ul className="space-y-4 mt-10">
             <li>
               <div className="flex items-center space-x-3">
@@ -163,7 +163,7 @@ const LoginPage = () => {
         </div>
 
         {/* Right Side */}
-        <div className="md:w-1/2 p-10">
+        <div className="md:w-1/2 p-10 md:order-2 order-1">
           {/* <form>
             <div className="space-y-4">
               <div>
