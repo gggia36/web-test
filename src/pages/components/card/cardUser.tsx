@@ -95,7 +95,7 @@ export default function CardUser() {
           <Card
             key={user.id}
             variant="outlined"
-            className="group hover:bg-sky-500 flex 	items-center relative"
+            className="group hover:bg-sky-500 flex 	items-center relative h-24 md:h-full"
           >
             <CardMedia
               className="w-40"

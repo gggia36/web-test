@@ -28,7 +28,7 @@ function MainLayout({ children }: { children: React.ReactNode }) {
     <>
       <div>
         <Box sx={{ flexGrow: 1 }}>
-          <AppBar position="fixed" className=" bg-transparent">
+          <AppBar className=" bg-transparent sm:fixed static ">
             <Toolbar className="flex justify-between	">
               <Image
                 src={"/assets/eventpass-logo.png"}
